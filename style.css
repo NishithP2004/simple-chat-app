@@ -27,23 +27,30 @@ main {
     max-width: 800px;
 }
 
+#chat {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 80vw;
+    max-width: 800px;
+}
+
 #chat input[type="text"] {
-    width: 50vw;
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     font-size: 1em;
-    max-width: 400px;
 }
 
 #chat input[type="submit"] {
     padding: 10px;
     border-radius: 10px;
-    width: 100px;
     font-size: 1em;
     box-sizing: border-box;
     color: #fff;
     background-color: black;
     transition: all 1s ease;
+    width: max-content;
 }
 
 #chat input[type="submit"]:hover {

@@ -14,18 +14,21 @@
 
 <body>
     <main>
+        <h1>Simple Chat App 🚀</h1>
         <div class="chat-container">
         </div>
         <form id="chat" name="chat">
             <input type="text" required name="message" placeholder="Type in your message... ">
             <input type="submit" value="Send">
         </form>
+        <p id="status"></p>
     </main>
     <script type="text/javascript">
         const socket = io();
         // client-side
         socket.on("connect", () => {
             console.log("Connected to " + socket.id); // x8WIv7-mJelg7on_ALbx
+            document.getElementById("status").innerText = "Connected to " + socket.id;
         });
 
         socket.on('message', data => {
